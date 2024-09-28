@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Order summary card</title>
+
+  <style>
+    body {
+      background-image: url(images/pattern-background-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: hsl(225, 100%, 94%);
+      width: 100vw;
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .hero {
+      background-color: white;
+      width: 25%;
+      border-radius: 16px;
+      text-align: center;
+      color: hsl(224, 23%, 55%);
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-bottom: 24px;
+    }
+
+    h1 {
+      color: hsl(223, 47%, 23%);
+    }
+
+    p {
+      width: 60%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .hero-img {
+      width: 100%;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+
+    .Payment {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .Payment-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .Payment-more {
+      display: flex;
+      gap: 160px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .Payment-button {
+      background-color: hsl(245, 75%, 52%);
+      color: white;
+    }
+
+    .Payment-button:hover {
+      background-color: hsl(224, 23%, 55%);
+    }
+
+    button {
+      border: 0;
+      border-radius: 12px;
+      width: 400px;
+      height: 48px;
+      background-color: white;
+      cursor: pointer;
+      font-weight: bolder;
+      font-size: medium;
+      color: hsl(224, 23%, 55%);
+    }
+
+    button:hover {
+      background-color: hsl(225, 100%, 94%);
+    }
+
+    /* Mobil cihazlar için stil */
+    @media (max-width: 768px) {
+      body {
+        background-image: url(images/pattern-background-mobile.svg);
+        background-size: cover;
+      }
+
+      .hero {
+        width: 90%;
+      }
+
+      button {
+        width: 90%;
+      }
+
+      p {
+        width: 80%;
+      }
+
+      .Payment-more {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .Payment-more a {
+        margin-top: 8px;
+      }
+    }
+
+    /* Tablet için */
+    @media (max-width: 1024px) {
+      .hero {
+        width: 60%;
+      }
+
+      button {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero">
+    <img src="images/illustration-hero.svg" alt="" class="hero-img">
+    <h1>Order Summary</h1>
+
+    <p>You can now listen to millions of songs, audiobooks, and podcasts on any
+      device anywhere you like!</p>
+
+    <div class="Payment">
+      <img src="images/icon-music.svg" alt="">
+      <div class="Payment-more">
+        <div class="Payment-details">
+          <span style="color: hsl(223, 47%, 23%); font-weight: bolder; font-size: medium;">Annual Plan</span>
+          <span>$59.99/year</span>
+        </div>
+        <a style="margin-bottom: auto; margin-top: auto;" href="#">Change</a>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button class="Payment-button">Proceed to Payment</button>
+      <button>Cancel Order</button>
+    </div>
+  </div>
+</body>
+
+</html>
